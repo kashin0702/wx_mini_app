@@ -1,0 +1,71 @@
+page{
+  background-color: #ccc;
+}
+.tab-control {
+  display: flex;
+  background-color: #fff;
+}
+.tab-item {
+  flex: 1;
+  text-align: center;
+  padding: 20rpx;
+}
+.active {
+  color: red;
+  border-bottom: 5rpx solid red;
+}
+.pro-title {
+  margin: 20rpx;
+  font-size: 28rpx;
+}
+.problems {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.problem-item {
+  font-size: 28rpx;
+  width: 30%;
+  background-color: #fff;
+  text-align: center;
+  margin: 20rpx 10rpx;
+}
+.desc {
+  margin: 10rpx;
+  background-color: #fff;
+}
+textarea {
+  background-color: #fff;
+  font-size: 28rpx;
+  height: 400rpx;
+  padding: 10rpx;
+  width: 90%;
+}
+
+/* 添加按钮和图片缩略图组成的工具栏容器 */
+.tool {
+  display: flex;
+  flex-wrap: wrap;
+}
+/* 添加图片按钮 */
+.add-btn {
+  width: 80rpx!important;
+  height: 80rpx;
+  padding:0!important;
+  margin: 20rpx!important;
+}
+/* 图片缩略图 */
+.up-load {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* 提交按钮 */
+.submit-btn {
+  background-color: red;
+  color: #fff;
+  position: absolute;
+  right: 10rpx;
+  padding: 10rpx!important;
+  width: 200rpx!important;
+}

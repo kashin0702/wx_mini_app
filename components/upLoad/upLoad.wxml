@@ -1,0 +1,5 @@
+<!--components/upLoad/upLoad.wxml-->
+<view class="container" wx:for="{{upLoadList}}" wx:key="*this">
+  <image class="up-img" src="{{item}}" ></image>
+  <image class="del-icon" src="/assets/img/shanchu.png" mode="widthFix" bindtap="removeImg" data-idx="{{index}}"></image>
+</view>

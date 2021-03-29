@@ -1,0 +1,9 @@
+/* 全局引入iconfont */
+@import "/assets/iconfont/iconfont.wxss";
+
+/* 初始化样式 */
+view,text,span,image,navigator {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

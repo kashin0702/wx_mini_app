@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "upLoad": "/components/upLoad/upLoad"
+  },
+  "navigationBarTitleText": "意见与建议"
+}

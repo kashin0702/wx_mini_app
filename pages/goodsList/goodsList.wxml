@@ -1,0 +1,20 @@
+<!--pages/goodsList/goodsList.wxml-->
+<!-- 搜索框 -->
+<search-input />
+<!-- tab分栏 监听tab点击事件 在slot内插入分频数据-->
+<tabControl bind:tabChange="tabChange" list="{{['综合','效率','价格']}}">
+  <view class="goods-container" wx:for="{{goods}}" wx:key="index">
+    <!-- 跳转到商品详情页，携带goods_id参数 -->
+    <navigator url="/pages/goodsDetail/goodsDetail?goods_id={{item.goods_id}}">
+      <view class="goods-box">
+        <view class="left">
+        <image src="{{item.goods_small_logo}}" mode="widthFix"></image>
+      </view>
+      <view class="right">
+        <view class="goods-name">{{item.goods_name}}</view>
+        <view class="goods-price">¥{{item.goods_price}}</view>
+      </view>
+      </view>
+    </navigator>
+  </view>
+</tabControl>

@@ -1,0 +1,13 @@
+<!--components/swiper/swiper.wxml-->
+<view class="container">
+  <swiper indicator-dots="{{true}}" interval="2000" duration="{{true}}" autoplay="{{true}}"
+          duration="500" circular="{{true}}">
+    <swiper-item wx:for="{{list}}" wx:key="index">
+      <!-- image外包一层navigator用于页面跳转 -->
+      <navigator>
+        <image src="{{item.image_src}}" mode="widthFix"></image>
+      </navigator>
+    </swiper-item>
+  </swiper>
+</view>
+

@@ -1,0 +1,91 @@
+swiper {
+  height: 80vw;
+}
+.swiper-img {
+  width: 100%;
+  height: 80vw;
+}
+
+.price {
+  font-size: 30rpx;
+  font-weight: bold;
+  color: red;
+  margin: 30rpx 0 30rpx 20rpx; 
+}
+.title {
+  display: flex;
+  border-bottom: 10rpx solid #ccc;
+  padding: 10rpx;
+}
+.name {
+  flex: 5;
+  border-right: 5rpx solid #ccc;
+  /* 多行文字显示省略号 */
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.fav {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.desc{
+  font-size: 30rpx;
+  font-weight: bold;
+  color: red;
+  margin: 30rpx 0 30rpx 20rpx; 
+}
+
+.bottom-bar {
+  display: flex;
+  height: 100rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.left {
+  flex: 1;
+  display: flex;
+  background-color: #fff;
+}
+.left-item {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.right {
+  flex: 1;
+  display: flex;
+}
+.right-item {
+  flex: 1;
+  text-align: center;
+  line-height: 100rpx;
+  height: 100rpx;
+}
+.add {
+  background-color: rgb(219, 138, 32);
+  color: #fff;
+}
+.buy {
+  background-color:rgb(233, 69, 69);
+  color: #fff;
+}
+/* 透明度0的button按钮覆盖原样式 实现点击时分享和联系客服 */
+button {
+  position: absolute;
+  height: 100%;
+  opacity: 0;
+}
+
+.iconshou_cang {
+  color: red;
+}

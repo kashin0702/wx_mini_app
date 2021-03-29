@@ -1,0 +1,8 @@
+<!--components/recommends/recommends.wxml-->
+<view class="container">
+  <view class="rec-item" wx:for="{{recommends}}" wx:key="index">
+    <navigator>
+      <view><image src="{{item.image_src}}" mode="widthFix"></image></view>
+    </navigator>
+  </view>
+</view>

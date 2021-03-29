@@ -1,0 +1,57 @@
+<!--pages/goodsDetail/goodsDetail.wxml-->
+<view class="swiper-container">
+  <swiper autoplay circular indicator-dots interval="2000">
+    <swiper-item wx:for="{{swiperImg}}" wx:key="index" bindtap="swiperClick" data-url="{{item.pics_big}}">
+      <image class="swiper-img" src="{{item.pics_big}}"></image>
+    </swiper-item>
+  </swiper>
+</view>
+<view class="price">
+  ¥{{goodsPrice}}
+</view>
+
+<View class="title">
+  <view class="name">{{goodsName}}</view>
+  <!-- 绑定收藏事件 -->
+  <view class="fav" bindtap="itemFav">
+    <!-- 收藏字体图标 -->
+    <text class="iconfont iconclassify" wx:if="{{!goodsFav}}"></text>
+    <text class="iconfont iconshou_cang" wx:else></text>
+    <text>收藏</text>
+  </view>
+</View>
+
+<view class="goods-info">
+  <view class="desc">图文详情</view>
+  <view class="content">
+    <!-- 富文本标签 使用nodes属性传值-->
+    <rich-text nodes="{{goodsContent}}"></rich-text>
+  </view>
+</view>
+
+<!-- 底部工具栏 -->
+<view class="bottom-bar">
+  <view class="left">
+    <view class="left-item">
+      <text class="iconfont iconkefu"></text>
+      <text>客服</text>
+      <!-- 这个button隐藏覆盖整个点击区域 -->
+      <button open-type="contact" size="mini"></button>
+    </view>
+    <view class="left-item">
+      <text class="iconfont iconfen_xiang"></text>
+      <text>分享</text>
+      <!-- 这个button透明度为0覆盖整个点击区域 -->
+      <button open-type="share" size="mini"></button>
+    </view>
+    <!-- switchTab：允许navigator跳转到tabBar页面 -->
+    <navigator class="left-item cart" url="/pages/shopcart/shopcart" open-type="switchTab">
+      <text class="iconfont icongouwuche"></text>
+      <text>购物车</text>
+    </navigator>
+  </view>
+  <view class="right">
+    <view class="right-item add" bindtap="addCart">加入购物车</view>
+    <view class="right-item buy">立即购买</view>
+  </view>
+</view>

@@ -1,0 +1,35 @@
+<!--components/category-first/category-first.wxml-->
+<view class="container">
+  <!-- 左侧一级频道标题 -->
+  <scroll-view scroll-y  class="left">
+    <view>
+      <view class="titles {{currentIndex===index ? 'active' : ''}}" wx:for="{{titleList}}" wx:key="index"
+        data-index="{{index}}" bindtap="titleClick">
+        {{item.cat_name}}
+      </view>
+    </view>
+  </scroll-view>
+
+  <!-- 右侧二级频道内容 -->
+  <scroll-view scroll-y scroll-top="{{scrollTop}}" class="right">
+    <view>
+      <view class="second-cat" wx:for="{{goodsList}}" wx:key="idx" wx:for-item="val" wx:for-index="idx">
+        <!-- 二级标题 -->
+        <view class="cat-name1"> / {{val.cat_name}} / </view>
+        <!-- 三级品牌 -->
+        <view class="cat2">
+          <view class="cat-name2" wx:for="{{val.children}}" wx:for-item="val2" wx:for-index="idx2" wx:key="idx2">
+            <view class="view-img">
+              <!-- 传递cid参数给跳转到的goodsList页面 -->
+              <navigator url="/pages/goodsList/goodsList?cid={{val2.cat_id}}">
+                <image class="cat-img" src="{{val2.cat_icon}}" mode="widthFix"/>
+              </navigator>
+            </view>
+            <view class="view-text">{{val2.cat_name}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+
+</view>

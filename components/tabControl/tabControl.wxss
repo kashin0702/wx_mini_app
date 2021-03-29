@@ -1,0 +1,13 @@
+.tab-container {
+  display: flex;
+}
+.tab-item {
+  flex: 1;
+  text-align: center;
+  height: 90rpx;
+  line-height: 90rpx;
+}
+.active {
+  color: red;
+  border-bottom: 5rpx solid red;
+}

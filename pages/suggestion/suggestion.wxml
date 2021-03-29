@@ -1,0 +1,22 @@
+<view class="container">
+  <view class="tab-control">
+    <view class="tab-item {{item.isActive ? 'active' : ''}}" wx:for="{{tabList}}" bindtap="tabClick"
+      data-index="{{index}}" wx:key="name">{{item.name}}</view>
+  </view>
+  <view class="pro-title">问题的种类</view>
+  <view class="problems">
+    <view class="problem-item">功能建议</view>
+    <view class="problem-item">购买遇到问题</view>
+    <view class="problem-item">性能问题</view>
+    <view class="problem-item">其他</view>
+  </view>
+  <view class="desc">
+    <textarea placeholder="请描述一下你的问题" bindinput="handleTextarea"></textarea>
+    <view class="tool">
+        <button class="add-btn" bindtap="upLoadImg" size="mini">+</button>
+        <!-- 把是否上传成功的状态传给子组件，控制子组件显示 -->
+        <upLoad class="up-load" upLoadList="{{upLoadList}}" bind:removeImg="removeImg"/>
+      </view>
+  </view>
+  <button class="submit-btn" bindtap="submit" size="mini">提交</button>
+</view>

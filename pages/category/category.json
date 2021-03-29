@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "categoryFirst": "/components/category-first/category-first"
+  },
+  "navigationBarTitleText": "分类",
+  "navigationBarBackgroundColor": "#7B68EE"
+}

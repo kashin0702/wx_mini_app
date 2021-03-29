@@ -1,0 +1,83 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/category/category",
+          "pathName": "pages/category/category",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/goodsList/goodsList",
+          "pathName": "pages/goodsList/goodsList",
+          "query": "cid=8",
+          "scene": null
+        },
+        {
+          "name": "pages/goodsDetail/goodsDetail",
+          "pathName": "pages/goodsDetail/goodsDetail",
+          "query": "goods_id=53947",
+          "scene": null
+        },
+        {
+          "name": "pages/shopcart/shopcart",
+          "pathName": "pages/shopcart/shopcart",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/pay/pay",
+          "pathName": "pages/pay/pay",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/profile/profile",
+          "pathName": "pages/profile/profile",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/order/order",
+          "pathName": "pages/order/order",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/search/search",
+          "pathName": "pages/search/search",
+          "query": "goods_id=53947",
+          "scene": null
+        },
+        {
+          "name": "pages/search/search",
+          "pathName": "pages/search/search",
+          "query": "goods_id=53947",
+          "scene": null
+        },
+        {
+          "name": "pages/suggestion/suggestion",
+          "pathName": "pages/suggestion/suggestion",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

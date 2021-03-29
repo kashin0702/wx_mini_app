@@ -1,0 +1,101 @@
+.address {
+  padding: 30rpx 0 30rpx;
+}
+.title {
+  border-top: 2rpx solid red;
+  border-bottom: 2rpx solid red;
+  padding: 20rpx 10rpx 20rpx;
+}
+.address2 {
+  display: flex;
+}
+.left-info {
+  flex: 4;
+  padding-left: 20rpx;
+}
+.right-number {
+  flex: 2;
+}
+
+/* 购物车样式 */
+.cart {
+ padding-bottom: 100rpx;
+}
+.cart-item {
+  display: flex;
+  border-bottom: 3rpx solid #ccc;
+}
+.item-check {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.item-img {
+  flex: 3;
+}
+.item-info {
+  flex: 5;
+  display: flex;
+  flex-direction: column; 
+  /* 方向换了，纵轴变成了主轴，所以可以用justify-content */
+  justify-content: space-around;
+}
+.item-img image {
+  width: 100%;
+}
+.item-other {
+  display: flex;
+}
+.price {
+  flex: 6;
+}
+.count-minus,.count,.count-add {
+  flex: 1;
+  text-align: center;
+}
+.count-minus,.count-add {
+  border: 2rpx solid #ccc;
+}
+
+.item-desc {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical; 
+  -webkit-line-clamp: 2;
+}
+/* 底部结算栏 */
+.tool-bar {
+  display: flex;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  border-top: 2rpx solid #ccc;
+  background-color: #fff;
+}
+.select-all {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.counter-all {
+  flex: 3;
+}
+.counter-all-item {
+  /* 文字靠右对齐 */
+  text-align: right;
+  margin-right: 20rpx;
+}
+.counter-all-item:last-child {
+  font-size: 24rpx;
+}
+.go-pay {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background-color: red;
+}

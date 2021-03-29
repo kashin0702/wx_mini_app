@@ -1,0 +1,9 @@
+<!--pages/order/order.wxml-->
+<view class="order-container">
+  <view class="tab">
+    <view class="tab-item {{item.isActive ? 'active' : ''}}" wx:for="{{tabs}}" 
+          bindtap="itemClick" data-index="{{index}}" wx:key="id">
+          {{item.name}}
+        </view>
+  </view>
+</view>

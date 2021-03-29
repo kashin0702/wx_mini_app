@@ -1,0 +1,86 @@
+/* pages/profile/profile.wxss */
+button {
+  margin-top: 30rpx;
+  margin-bottom: 200rpx;
+}
+.user-wrap {
+  background-color: #ccc;
+  height: 100%;
+}
+.user-container {
+  position: relative;
+}
+.back {
+  width: 100%;
+  /* 图片模糊效果 */
+  filter: blur(7rpx);
+}
+.avatar {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+.user-detail {  
+  /* 头像和名字居中显示 */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50rpx, -50rpx);
+}
+.user-name {
+  margin-top: 40rpx;
+  text-align: center;
+  color: #fff;
+}
+
+.my-fav {
+  display: flex;
+  position: relative;
+  top: -30rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+.fav-item {
+  flex: 1;
+  text-align: center;
+  background-color: #fff;
+  padding: 10rpx;
+  font-size: 25rpx;
+}
+.order-container {
+  background-color: #fff;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+.order-title {
+  padding: 20rpx;
+  border-bottom: 5rpx solid #ccc;
+  font-size: 30rpx;
+}
+.my-order {
+  display: flex;
+}
+.order-item {
+  padding: 20rpx;
+  flex: 1;
+  text-align: center;
+  font-size: 25rpx;
+}
+.order-item image {
+  width: 30%;
+}
+.address {
+  padding: 20rpx;
+  background-color: #fff;
+  margin: 30rpx 20rpx;
+}
+.other-item {
+  padding: 20rpx;
+  background-color: #fff;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  border-bottom: 5rpx solid #ccc;
+}
+.tel-number {
+  float: right;
+}

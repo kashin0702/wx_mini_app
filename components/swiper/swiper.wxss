@@ -1,0 +1,11 @@
+/* components/swiper/swiper.wxss */
+swiper {
+  /* swiper有默认样式：width:100% height: 150rpx
+    需要手工设置容器的原始高度=图片高度， 340rpx是该图片的原始高度
+  */
+  height: 340rpx;
+}
+/* image默认样式:320 * 240  */
+swiper-item image{
+  width: 100%;
+}

@@ -1,0 +1,70 @@
+<view class="address-add">
+  <view class="address">
+    <!-- 判断1.address是否有值，没有就显示添加收货地址 -->
+    <button wx:if="{{!address.userName}}" type="primary" plain class="addres-btn" bindtap="getAddress">
+      添加收货地址
+    </button>
+    <!-- 判断2.address有值，显示收货信息 -->
+    <view class="address2" wx:else>
+      <view class="left-info">
+        <view class="left-info-name">
+          收货人：{{address.userName}}
+        </view>
+        <view class="left-info-add">
+          {{address.provinceName + address.cityName + address.countyName + address.detailInfo}}
+        </view>
+      </view>
+      <view class="right-number">{{address.telNumber}}</view>
+    </view>
+  </view>
+</view>
+<view class="title">购物车</view>
+
+<!-- 购物车容器 -->
+<view class="cart">
+  <!-- 每一条购物车数据，可循环项 -->
+  <view class="cart-item" wx:for="{{goods}}" wx:key="index">
+    <!-- 商品复选框 -->
+    <view class="item-check">
+      <!-- 把商品Index传给checkChange，用于获取点击的是哪个复选框 -->
+      <checkbox-group bindchange="checkChange" data-idx="{{index}}">
+        <checkbox checked="{{item.goods_checked}}"></checkbox>
+      </checkbox-group>
+    </view>
+    <!-- 商品图片 可点击跳转到商品详情 -->
+    <navigator class="item-img" url="/pages/goodsDetail/goodsDetail?goods_id={{item.goodsId.goods_id}}">
+      <image src="{{item.goods_img.pics_sma}}" mode="widthFix" />
+    </navigator>
+    <!-- 右侧商品信息 -->
+    <view class="item-info">
+      <!-- 商品名称 -->
+        <view class="item-desc">
+         {{item.goods_name}}
+        </view>
+        <view class="item-other">
+        <!-- 商品价格 -->
+          <view class="price">¥{{item.goods_price}}</view>
+            <!-- 商品数量 -->
+          <view class="count-minus" bindtap="handleNum" data-num="{{-1}}" data-idx="{{index}}">-</view>
+          <view class="count">{{item.goodsNum}}</view>
+          <view class="count-add" bindtap="handleNum" data-num="{{1}}" data-idx="{{index}}">+</view>
+        </view>
+    </view>
+  </view>
+  <!-- 底部结算栏 -->
+  <view class="tool-bar">
+    <view class="select-all">
+      <checkbox-group bindchange="selectAll" >
+        <checkbox checked="{{allCheck}}">全选</checkbox>
+      </checkbox-group>
+    </view>
+    <view class="counter-all">
+      <view class="counter-all-item">合计：{{totalPrice}}</view>
+      <view class="counter-all-item">包含运费</view>
+    </view>
+    <view class="go-pay" bindtap="goPay">
+      结算({{totalCount}})
+    </view>
+  </view>
+</view>
+

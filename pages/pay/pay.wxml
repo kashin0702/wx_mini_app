@@ -1,0 +1,52 @@
+<view class="address-add">
+  <view class="address">
+    <view class="address2">
+      <view class="left-info">
+        <view class="left-info-name">
+          收货人：{{address.userName}}
+        </view>
+        <view class="left-info-add">
+          {{address.provinceName + address.cityName + address.countyName + address.detailInfo}}
+        </view>
+      </view>
+      <view class="right-number">{{address.telNumber}}</view>
+    </view>
+  </view>
+</view>
+
+<view class="title">购物车</view>
+
+<!-- 购物车容器 -->
+<view class="cart">
+  <!-- 每一条购物车数据，可循环项 -->
+  <view class="cart-item" wx:for="{{cart}}" wx:key="index">
+    
+    <!-- 商品图片 可点击跳转到商品详情 -->
+    <navigator class="item-img" url="/pages/goodsDetail/goodsDetail?goods_id={{item.goodsId.goods_id}}">
+      <image src="{{item.goods_img.pics_sma}}" mode="widthFix" />
+    </navigator>
+    <!-- 右侧商品信息 -->
+    <view class="item-info">
+      <!-- 商品名称 -->
+        <view class="item-desc">
+         {{item.goods_name}}
+        </view>
+        <view class="item-other">
+        <!-- 商品价格 -->
+          <view class="price">¥{{item.goods_price}}</view>
+            <!-- 商品数量 -->
+          <view class="count">{{item.goodsNum}}</view>
+        </view>
+    </view>
+  </view>
+  <!-- 底部结算栏 -->
+  <view class="tool-bar">
+    <view class="counter-all">
+      <view class="counter-all-item">合计：{{totalPrice}}</view>
+      <view class="counter-all-item">包含运费</view>
+    </view>
+    <view class="go-pay" bindtap="handlePay">
+      支付({{totalCount}})
+    </view>
+  </view>
+</view>

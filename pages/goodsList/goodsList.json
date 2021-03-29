@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "search-input": "/components/search-input/search-input",
+    "tabControl": "/components/tabControl/tabControl"
+  },
+  "navigationBarBackgroundColor": "#7B68EE",
+  "navigationBarTitleText": "商品列表",
+  "enablePullDownRefresh": true
+}

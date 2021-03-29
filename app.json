@@ -1,0 +1,52 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/category/category",
+    "pages/shopcart/shopcart",
+    "pages/profile/profile",
+    "pages/search/search",
+    "pages/goodsList/goodsList",
+    "pages/goodsDetail/goodsDetail",
+    "pages/pay/pay",
+    "pages/auth/auth",
+    "pages/order/order",
+    "pages/suggestion/suggestion"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#7B68EE",
+    "navigationBarTitleText": "首页",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#ff0000",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "/assets/img/shouye.png",
+        "selectedIconPath": "/assets/img/shouye-copy.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/category/category",
+        "iconPath": "/assets/img/classify.png",
+        "selectedIconPath": "/assets/img/classify-copy.png",
+        "text": "分类"
+      },
+      {
+        "pagePath": "pages/shopcart/shopcart",
+        "iconPath": "/assets/img/gou_wu_che2.png",
+        "selectedIconPath": "/assets/img/gou_wu_che2-copy.png",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "iconPath": "/assets/img/huaban36.png",
+        "selectedIconPath": "/assets/img/huaban36-copy.png",
+        "text": "个人中心"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

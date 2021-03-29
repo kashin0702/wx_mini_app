@@ -1,0 +1,38 @@
+/* components/floorData/floorData.wxss */
+
+.floor-image {
+  width: 100%;
+  margin-top: 30rpx;
+}
+.floor-item {
+  clear: both;
+}
+.title-item {
+  float: left;
+  width: 33.33vw;
+}
+.title-image {
+  width: 100%;
+  /* height: 100%; */
+  height: 27.72vw; 
+}
+
+/* 计算第一张图的高度
+  第一张长图的宽高比 等于 当前33.33vw / 未知高度
+  232 / 386 = 33.33vw / height 可得出 height = 33.33 / (232/386) = 55.45vw
+  即第一张长图的高度是55.45vw 后面4张图高度为第一张图高度的一半即可
+*/
+/* 后四张图样式 */
+.title-item:nth-last-child(-n+4) { 
+  /* 27.72vw只是宽高比值，不是当成宽度单位来用，不要混淆 */
+  height: 27.72vw; 
+  /* 1.利用padding留空隙 */
+  padding-left: 10rpx;
+}
+.title-item:nth-child(2) {
+  /* 2.利用边框留空隙 */
+  border-left: 10rpx solid #fff;
+}
+.title-item:nth-child(4),.title-item:nth-child(6) {
+  padding-right: 10rpx;
+}

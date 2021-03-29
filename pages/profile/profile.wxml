@@ -1,0 +1,111 @@
+<!--pages/profile/profile.wxml-->
+
+<view class="user-wrap">
+  <!-- 1.有缓存数据显示用户信息 -->
+  <view class="user-container" wx:if="{{userInfo.nickName}}">
+    <image class="back" src="{{userInfo.avatarUrl}}" />
+    <view class="user-detail">
+      <image class="avatar" src="{{userInfo.avatarUrl}}" />
+      <view class="user-name">{{userInfo.nickName}}</view>
+    </view>
+  </view>
+  <!-- 2.没有缓存就显示登录按钮 -->
+<view wx:else>
+  <button open-type="getUserInfo" type="primary" plain bindgetuserinfo="getUserInfo" >
+    登录
+  </button>
+</view>
+ 
+
+  <!-- 收藏的店铺等等 -->
+  <view class="my-fav">
+    <view class="fav-item">
+      <navigator>
+        <view>{{0}}</view>
+        <view>收藏的店铺</view>
+      </navigator>
+    </view>
+    <view class="fav-item">
+      <navigator>
+        <view>{{collectNums}}</view>
+        <view>收藏的商品</view>
+      </navigator>
+    </view>
+    <view class="fav-item">
+      <navigator>
+        <view>{{0}}</view>
+        <view>关注的商品</view>
+      </navigator>
+    </view>
+    <view class="fav-item">
+      <navigator>
+        <view>{{0}}</view>
+        <view>我的足迹</view>
+      </navigator>
+    </view>
+  </view>
+  <!-- 我的订单 -->
+  <view class="order-container">
+    <view class="order-title">我的订单</view>
+
+    <view class="my-order">
+      <view class="order-item">
+        <!-- 全部订单连接 需要传type=1 给接口调用-->
+        <navigator url="/pages/order/order?type=1">
+          <view>
+            <image src="/assets/img/dingdan.png" mode="widthFix"></image>
+          </view>
+          <view>全部订单</view>
+        </navigator>
+      </view>
+      <view class="order-item">
+        <!-- 待付款连接，需要传type=2 给接口调用 -->
+        <navigator url="/pages/order/order?type=2">
+          <view>
+            <image src="/assets/img/fukuan.png" mode="widthFix"></image>
+          </view>
+          <view>待付款</view>
+        </navigator>
+      </view>
+      <view class="order-item">
+        <!-- 待收货连接，需要传type=3给接口调用 -->
+        <navigator url="/pages/order/order?type=3">
+          <view>
+            <image src="/assets/img/shouhuo.png" mode="widthFix"></image>
+          </view>
+          <view>待收货</view>
+        </navigator>
+      </view>
+      <view class="order-item">
+        <navigator url="/pages/order/order?type=4">
+          <view>
+            <image src="/assets/img/tuihuo.png" mode="widthFix"></image>
+          </view>
+          <view>退款/退货</view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+  <!-- 收货地址管理 -->
+  <navigator>
+    <view class="address">收货地址管理</view>
+  </navigator>
+  <!-- 客服、意见反馈、关于 -->
+  <view class="other">
+    <navigator>
+      <view class="other-item">
+        <text>联系客服</text>
+        <text class="tel-number">400-618-4000</text>
+      </view>
+    </navigator>
+    <navigator url="/pages/suggestion/suggestion">
+      <view class="other-item">意见反馈</view>
+    </navigator>
+    <navigator>
+      <view class="other-item">关于我们</view>
+    </navigator>
+    <navigator>
+      <view class="other-item">推荐给其他人</view>
+    </navigator>
+  </view>
+</view>

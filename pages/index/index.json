@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "search-input": "/components/search-input/search-input",
+    "swiper": "/components/swiper/swiper",
+    "recommends": "/components/recommends/recommends",
+    "floorData": "/components/floorData/floorData"
+  },
+  "navigationBarTitleText": "商城mall",
+  "navigationBarBackgroundColor": "#7B68EE"
+}

@@ -1,0 +1,35 @@
+.container {
+  background-color: #ccc;
+}
+.search-item {
+  display: flex;
+  height: 90rpx;
+}
+input {
+  flex: 1;
+  background-color: #fff;
+  margin: 20rpx;
+}
+.btn{
+  /* 小程序button有默认样式，要加important提权 */
+  width: 100rpx!important;
+  font-size: 25rpx;
+  padding: 0;
+  margin: 20rpx 20rpx 20rpx 0 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.result-item {
+  height: 60rpx;
+  line-height: 60rpx;
+  padding: 0 10rpx;
+  font-size: 28rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  background-color: #fff;
+  margin: 0 20rpx;
+  border-bottom: 8rpx solid #ccc;
+}

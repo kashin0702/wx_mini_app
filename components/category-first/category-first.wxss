@@ -1,0 +1,48 @@
+/* components/category-first/category-first.wxss */
+.container {
+  display: flex;
+}
+.left {
+  flex: 2;
+  background: rgb(197, 189, 189);
+  /* 左右独立滚动条生效 需要给容器加上视口高度 */
+  height: 100vh;
+}
+.titles {
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  border-bottom: 4rpx solid #fff;
+}
+.active {
+  background: #fff;
+  color: red;
+  border-left: 10rpx solid red;
+}
+
+.right {
+  flex: 5;
+  /* 左右独立滚动条需要给容器加上高度 */
+  height: 100vh;
+}
+.cat-name1 {
+  line-height: 80rpx;
+  height: 80rpx;
+  text-align: center;
+}
+.cat2 {
+  display: flex;
+  flex-wrap: wrap;
+}
+.cat-name2 {
+  width: 30%;
+  padding-left: 30rpx;
+  padding-bottom: 30rpx;
+}
+
+.cat-img {
+  width: 100%;
+}
+.view-text {
+  text-align: center;
+}

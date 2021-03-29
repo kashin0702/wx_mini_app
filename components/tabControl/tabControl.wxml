@@ -1,0 +1,11 @@
+<!--components/tabControl/tabControl.wxml-->
+<view class="container">
+  <view class="tab-container">
+    <view class="tab-item {{currentIndex===index ? 'active':''}}" wx:for="{{list}}" wx:key="index"
+      data-index="{{index}}" bindtap="tabClick">
+      {{item}}
+    </view>
+  </view>
+  <!-- 加入插槽，用于父元素插入分栏数据 -->
+  <slot></slot>
+</view>
